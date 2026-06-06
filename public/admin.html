@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinTrack - Адмін Панель</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #343a40; color: white; margin: 0; padding: 20px; }
+        .header { display: flex; justify-content: space-between; align-items: center; background: #212529; padding: 15px 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.5); }
+        .container { background: #495057; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.5); }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; color: white; }
+        th, td { padding: 12px; border-bottom: 1px solid #6c757d; text-align: left; }
+        th { background-color: #212529; }
+        .block-btn { background-color: #dc3545; color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer; font-weight: bold; }
+        .block-btn:hover { background-color: #c82333; }
+        .back-btn { background-color: #007bff; color: white; text-decoration: none; padding: 10px 15px; border-radius: 4px; font-weight: bold; }
+        .back-btn:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h2 style="margin: 0;">FinTrack | Панель Адміністратора</h2>
+        <a href="/dashboard.html" class="back-btn">Повернутися до Дашборду</a>
+    </div>
+
+    <div class="container">
+        <h3>Керування користувачами</h3>
+        <p>Увага: Блокування користувача назавжди видалить його обліковий запис та всі пов'язані фінансові дані.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Email</th>
+                    <th>Дата реєстрації</th>
+                    <th>Кількість записів</th>
+                    <th>Дія</th>
+                </tr>
+            </thead>
+            <tbody id="users-tbody">
+                </tbody>
+        </table>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

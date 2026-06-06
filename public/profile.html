@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinTrack - Профіль</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f7f6; margin: 0; padding: 20px; }
+        .header { display: flex; justify-content: space-between; align-items: center; background: white; padding: 15px 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .container { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); max-width: 400px; margin: 0 auto; }
+        input, select { width: 100%; padding: 10px; margin: 10px 0 20px 0; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        button { width: 100%; padding: 10px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
+        button:hover { background-color: #218838; }
+        .btn-secondary { background-color: #6c757d; margin-top: 10px; }
+        .btn-secondary:hover { background-color: #5a6268; }
+        #message { margin-top: 15px; text-align: center; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h2 style="margin: 0;">FinTrack - Мій Профіль</h2>
+        <a href="/dashboard.html" style="text-decoration: none; color: #007bff; font-weight: bold;">⬅ Назад до Дашборду</a>
+    </div>
+
+    <div class="container">
+        <p><strong>Ваш Email:</strong> <span id="user-email">завантаження...</span></p>
+        
+        <form id="profile-form">
+            <label for="currency">Базова валюта обліку:</label>
+            <select id="currency">
+                <option value="₴">Гривня (₴)</option>
+                <option value="$">Долар США ($)</option>
+                <option value="€">Євро (€)</option>
+            </select>
+
+            <label for="new-password">Новий пароль (залиште порожнім, якщо не міняєте):</label>
+            <input type="password" id="new-password" placeholder="Введіть новий пароль">
+
+            <button type="submit">Зберегти зміни</button>
+        </form>
+
+        <div id="message"></div>
+    </div>
+
+    <script src="profile.js"></script>
+</body>
+</html>
